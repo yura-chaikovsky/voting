@@ -47,15 +47,19 @@
             height: 500px;
         }
 
-        path.slice{
+        path.slice {
             stroke-width:2px;
         }
 
-        polyline{
+        polyline {
             opacity: .3;
             stroke: black;
             stroke-width: 2px;
             fill: none;
+        }
+
+        .labels {
+            font-size: 28px;
         }
 
     }
