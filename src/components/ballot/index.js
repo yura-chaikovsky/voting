@@ -7,7 +7,7 @@ import ShakeEvent from "./shake";
 
 export const BallotPage = new Page(
     {
-        pathname: /^\/vote$/,
+        pathname: /^\/vote\/?$/,
         mountTo: "body",
         view: SView,
 
