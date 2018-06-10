@@ -68,9 +68,11 @@ export const VotingPage = new Page(
             Storage.saveAnswer(this.question.id, event.detail);
             const question = Storage.getQuestionById(this.$options.routeMatches[1]);
             this.results(question.results);
+            console.log(this.results());
         },
 
         hasVoted(results, voterId){
+            console.log("hasVoted: ", voterId, results);
             return results.some(result => result.votes.some(vote => vote.voterId == voterId));
         }
     });

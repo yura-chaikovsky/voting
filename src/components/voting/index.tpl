@@ -16,7 +16,8 @@
 
         <div class="voters">
             {::votersList().map(voter =>
-                <div class={"voter " + (::hasVoted(::results(), voter.id)? "voted" : "")}
+                <div data-id={voter.id}
+                     class={"voter " + (::hasVoted(::results(), voter.id)? "voted" : "")}
                      style={{animationDelay: (Math.random()*1992 | 0) + "ms"}}></div>
             )}
         </div>
