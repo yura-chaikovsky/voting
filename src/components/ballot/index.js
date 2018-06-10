@@ -50,7 +50,9 @@ export const BallotPage = new Page(
         },
 
         shake() {
-            window.navigator.vibrate([100, 50, 100, 50, 100]);
+            if(window.navigator.vibrate) {
+                window.navigator.vibrate([100, 50, 100, 50, 100]);
+            }
             VotingService.askToShake();
         },
 
