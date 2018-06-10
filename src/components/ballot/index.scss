@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+.ballot-page {
+    font-family: 'Fredericka the Great', cursive;
+
+    .page-grid {
+        display: grid;
+        grid-template: 30% 50% 20% / 1fr;
+        height: 90vh;
+        text-align: center;
+
+        .welcome {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .hooray {
+                font-size: 72px;
+            }
+
+            .text {
+                font-size: 65px;
+            }
+        }
+
+        .shake-message {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                width: 40vw;
+                max-width: 130px;
+                margin: 12px 0;
+                svg {
+                    fill: #888888;
+                }
+            }
+
+            .shake-action {
+                font-size: 32px;
+            }
+        }
+    }
+    .shake-button {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 24px;
+        background: #fff;
+        border: 2px dotted #888888;
+        padding: 12px 24px;
+        margin: 24px;
+        color: #888888;
+        outline: none;
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+    }
+
+    .no-connection {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .ooops {
+            font-size: 72px;
+            margin-bottom: 24px;
+        }
+
+        .cant-connect {
+            font-size: 20px;
+            padding: 0 24px;
+            margin-bottom: 24px;
+        }
+
+        .try {
+            font-size: 20px;
+        }
+    }
+
+
+    .ballot {
+
+        .ballot-list{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 12px;
+        }
+
+        .answer-text{
+            font-size: 24px;
+            margin: 24px 0;
+        }
+
+        .answer {
+            font-size: 36px;
+            padding: 12px 24px;
+            border: 2px dotted #888888;
+            margin: 12px 0;
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .gotcha {
+        display: flex;
+        height: 90vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 48px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+}

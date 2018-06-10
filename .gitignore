@@ -1,0 +1,16 @@
+# compiled output
+/dist
+/tmp
+
+# dependencies
+node_modules
+config/config.prod.js
+
+# IDEs and editors
+.vs
+.vscode
+.idea
+
+#System Files
+.DS_Store
+Thumbs.db

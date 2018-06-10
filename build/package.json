@@ -1,0 +1,17 @@
+{
+  "name": "conference-voting",
+  "version": "1.0.0",
+  "description": "",
+  "browser": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server --open",
+    "build": "./node_modules/.bin/webpack"
+  },
+  "author": "Yura Chaikovsky",
+  "license": "MIT",
+  "dependencies": {
+    "ruth": "git+https://github.com/yura-chaikovsky/ruth.git",
+    "ws": "^5.2.0"
+  }
+}

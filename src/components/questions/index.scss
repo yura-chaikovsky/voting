@@ -1,0 +1,102 @@
+.questions-page {
+
+    .register-page-link {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+
+        .icon {
+            fill: #ccc;
+        }
+    }
+
+    .questions-list {
+        padding: 80px 20px 20px 20px;
+
+        input[type=text], select {
+            font-family: 'Fira Sans', sans-serif;
+            border: 1px solid transparent;
+            font-size: 20px;
+            padding: 5px;
+            cursor: default;
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid #aaa;
+            }
+        }
+
+        .action-link {
+            display: inline-block;
+            margin-left: 30px;
+            cursor: pointer;
+            width: 40px;
+
+            .icon {
+                fill: #ccc;
+
+                &:hover {
+                    fill: #000;
+                }
+
+                &:active {
+                    margin: 1px 0 0 1px;
+                }
+            }
+        }
+
+        .question {
+            margin: 10px 0;
+
+            &:hover .question-name {
+                border-color: #000;
+            }
+
+            .question-name {
+                border: 2px solid #aaa;
+                border-radius: 10px 0 0 0;
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 1fr 200px;
+
+                .actions {
+                    text-align: right;
+                }
+
+            }
+
+            &:hover .options {
+                border-color: #000;
+            }
+
+            .options {
+                border: 2px solid #aaa;
+                border-radius: 0 0 10px 0;
+                border-top: none;
+                margin-left: 15px;
+                padding: 15px;
+
+                .options-list {
+                    margin: 0 0 10px 0;
+                    font-size: 20px;
+                    list-style: lower-latin;
+
+                    .option {
+                        padding: 5px;
+                    }
+                }
+            }
+
+            .music-icon{
+                display: inline-block;
+                width: 20px;
+                position: relative;
+                top: 3px;
+                margin-left: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.register-page {
+    height: 100vh;
+
+    .page-grid {
+        display: grid;
+        grid-template: 1fr 50px / 50% 50%;
+        height: 100%;
+    }
+
+    .close {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+
+        .icon{
+            fill: #ccc;
+        }
+    }
+
+    .link {
+        grid-row: span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .url {
+            margin-top: 30px;
+            font-size: 40px;
+        }
+    }
+
+    .voters-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .voter {
+            height: 70px;
+            width: 70px;
+            margin: 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background: #050;
+            animation: voter-fading 1.5s ease-in infinite alternate
+        }
+
+
+        .shake {
+            background: #07ef92;
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            animation-delay: 0s !important;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+
+    .connected-count {
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+@keyframes voter-fading {
+    80% { background: #0a6; }
+    100% { background: #0a6; }
+}
+
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(4px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-8px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(8px, 0, 0);
+    }
+}

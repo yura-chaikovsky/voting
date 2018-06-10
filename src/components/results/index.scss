@@ -1,0 +1,63 @@
+.results-page {
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.4, 0, 1, 1);
+
+    &.open {
+        opacity: 1;
+    }
+
+    .register-page-link {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+
+        .icon {
+            fill: #ccc;
+        }
+    }
+
+    .page-grid {
+        display: grid;
+        grid-template: minmax(200px, 30%) 1fr / 1fr;
+        height: 100%;
+    }
+
+    .question {
+        grid-column: span 2;
+        font-size: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 40px 10px 40px;
+    }
+
+
+    .chart {
+        position: relative;
+        text-align: center;
+
+
+        svg {
+            width: 980px;
+            height: 500px;
+        }
+
+        path.slice{
+            stroke-width:2px;
+        }
+
+        polyline{
+            opacity: .3;
+            stroke: black;
+            stroke-width: 2px;
+            fill: none;
+        }
+
+    }
+
+}
