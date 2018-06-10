@@ -1,8 +1,6 @@
 import "./index.html";
 import "./index.scss";
 
-import OnlineStatus from "./components/online-status";
-
 
 import "./components/data/voting"
 import "./components/register";
