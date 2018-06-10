@@ -31,9 +31,6 @@ export default (function() {
 
             audio = tracks[trackIndex].audioObject;
             audio.play();
-            setTimeout(() => {
-                console.log(audio.duration);
-            }, 200);
             return this.tracks[trackIndex];
         },
 
