@@ -1,35 +1,37 @@
-const path = require('path');
-const Webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path");
+const Webpack = require("webpack");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
-const BUILD_PATH = path.join(__dirname, './../dist');
-const MODE = 'development';
+const BUILD_PATH = path.join(__dirname, "./../dist");
+const MODE = "development";
 // //"ruth": "git+https://github.com/yura-chaikovsky/ruth.git",
 
 module.exports = {
     mode: MODE,
-    entry: path.join(__dirname, './../src/index.js'),
+    entry: path.join(__dirname, "./../src/index.js"),
     output: {
-        filename: './main.js',
+        filename: "./main.js",
         path: path.resolve(__dirname, BUILD_PATH),
-        publicPath: '/'
+        publicPath: "/"
     },
     resolve: {
-        extensions: ['.jsx', '.js'],
+        extensions: [".jsx", ".js"],
         modules: [path.resolve(__dirname, "node_modules")]
     },
     module: {
         rules: [
-            {test: /\.tpl?$/, use: ['./template-post-loader.js', 'surplus-loader', './template-pre-loader.js',] },
-            {test: /\.scss$/, use: ExtractTextPlugin.extract({use: ['css-loader', 'sass-loader']}) },
-            {test: /\.(png|jpg|gif|html)$/, use: ['file-loader?name=[name].[ext]']}
+            {test: /\.tpl?$/, use: ["./template-post-loader.js", "surplus-loader", "./template-pre-loader.js",] },
+            {test: /\.scss$/, use: ExtractTextPlugin.extract({use: ["css-loader", "sass-loader"]}) },
+            {test: /\.(png|jpg|gif|html)$/, use: ["file-loader?name=[name].[ext]"]}
         ]
     },
     plugins: [
-        new CleanWebpackPlugin([BUILD_PATH], {root: path.join(__dirname, './../')}),
-        new Webpack.ProvidePlugin({Surplus: 'surplus'}),
+        new CleanWebpackPlugin([BUILD_PATH], {root: path.join(__dirname, "./../")}),
+        new CopyWebpackPlugin([{from: "./../src/assets", to: BUILD_PATH + "/assets/"}]),
+        new Webpack.ProvidePlugin({Surplus: "surplus"}),
         new ExtractTextPlugin("main.css", {options: {allChunks: true}})
     ],
     devServer: {
@@ -39,6 +41,6 @@ module.exports = {
         hot: false,
         https: false,
         noInfo: false,
-        host: '0.0.0.0'
+        host: "0.0.0.0"
     },
 };

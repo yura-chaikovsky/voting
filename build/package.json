@@ -11,6 +11,7 @@
   "author": "Yura Chaikovsky",
   "license": "MIT",
   "dependencies": {
+    "copy-webpack-plugin": "^4.5.1",
     "ruth": "git+https://github.com/yura-chaikovsky/ruth.git",
     "ws": "^5.2.0"
   }
