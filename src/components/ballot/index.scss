@@ -9,6 +9,12 @@
         height: 90vh;
         text-align: center;
 
+        @media only screen and (orientation: landscape) {
+            & {
+                grid-template: 60% 20% 20% / 1fr;
+            }
+        }
+
         .welcome {
             display: flex;
             justify-content: center;
@@ -35,6 +41,12 @@
                 margin: 12px 0;
                 svg {
                     fill: #888888;
+                }
+
+                @media only screen and (orientation: landscape) {
+                    & {
+                        display: none;
+                    }
                 }
             }
 
