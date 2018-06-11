@@ -25,6 +25,7 @@ export const RegisterPage = new Page(
             });
 
             VotingService.registerHost();
+            VotingService.endVoting();
             AudioService.stop();
         },
 
