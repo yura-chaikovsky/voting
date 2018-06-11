@@ -13,7 +13,8 @@ export default (function() {
         { duration: 25050, peak: 20250, title: "Fall in love", path: "inlove.mp3" },
         { duration: 25462, peak: 20600, title: "Madcap", path: "madcap.mp3" },
         { duration: 25311, peak: 21000, title: "Hardly working", path: "hardly-working.mp3" },
-        { duration: 31023, peak: 26400, title: "Happy days", path: "happy-days.mp3" }
+        { duration: 31023, peak: 26400, title: "Happy days", path: "happy-days.mp3" },
+        { duration: 31023, peak: 26400, title: "Millionaire", path: "millionaire.mp3" }
     ];
 
     tracks.forEach(track => {
