@@ -31,6 +31,7 @@ export default (function() {
             this.stop();
 
             audio = tracks[trackIndex].audioObject;
+            audio.currentTime = 0;
             audio.play();
             return this.tracks[trackIndex];
         },
