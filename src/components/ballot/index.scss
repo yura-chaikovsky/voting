@@ -133,10 +133,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 32px;
+        text-align: center;
+        font-size: 18px;
 
         .title {
             font-size: 48px;
-            margin-bottom: 24px;
+            margin-bottom: 48px;
             text-align: center;
         }
     }

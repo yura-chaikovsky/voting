@@ -70,6 +70,15 @@
                 background: #050;
                 animation: voter-fading 1.5s ease-in infinite alternate
             }
+
+            &.shake {
+                background: #07ef92;
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                animation-delay: 0s !important;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 1000px;
+            }
         }
     }
 

@@ -44,7 +44,8 @@
             </div>
             <div class="gotcha" style={{display: ::answered() ? "flex" : "none"}}>
                 <div class="title">Gotcha!</div>
-                <div>Now lets wait for others.</div>
+                <div>Feel free to shake <br />while we are waiting for others.</div>
+                <button className="shake-button" onClick={::shake}>Shake It</button>
             </div>
         </div>
     </div>

@@ -27,6 +27,8 @@ export const VotingPage = new Page(
 
             VotingService.eventEmitter.addEventListener("onVote", this.saveAnswer);
 
+            VotingService.eventEmitter.addEventListener("onShakeIt", this.shakeIt);
+
             VotingService.startVoting(this.question);
 
             const trackId = this.question.pool.audio == -1? Math.floor(AudioService.tracks.length * Math.random()) : this.question.pool.audio;
@@ -72,5 +74,18 @@ export const VotingPage = new Page(
 
         hasVoted(results, voterId){
             return results.some(result => result.votes.some(vote => vote.voterId == voterId));
+        },
+
+        shakeIt(event){
+            let ball = this.$dom.querySelector(`[data-id="${event.detail}"]`);
+
+            if(!ball || ball.classList.contains("shake")){
+                return;
+            }
+            ball.classList.add("shake");
+
+            setTimeout(() => {
+                ball.classList.remove("shake");
+            }, 1000)
         }
     });
