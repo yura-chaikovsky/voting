@@ -46,7 +46,9 @@ class VotingServiceClass {
     }
 
     registerHost() {
-        this._sendMessage({action: "registerHost"});
+        if(window.localStorage.host){
+            this._sendMessage({action: "registerHost"});
+        }
     }
 
     registerVoter() {
